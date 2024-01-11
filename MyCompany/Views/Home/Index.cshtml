@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="text-center ">Добро пажаловат в Компании Хуросон</h1>
+<br />
+
+<div ><a asp-controller="Organization" asp-action="Index">Список Организация</a></div>
+<br />
+<div><a asp-controller="Sotrudnik" asp-action="Index">Список Сотрудники</a></div>
+
+ <div>
+    <div><a asp-controller="Sotrudnik" asp-action="ExportCSV">Экспорт в CSV-файл</a></div>
+
+ </div>
+
+<div>
+    <div><a asp-controller="Sotrudnik" asp-action="Import">Импорт в CSV-файл</a></div>
+
+</div>

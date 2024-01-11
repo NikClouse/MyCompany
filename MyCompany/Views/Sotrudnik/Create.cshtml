@@ -1,0 +1,38 @@
+﻿@using MyCompany.Models
+@model Sotrudnik
+
+
+<h1>Create Sotrudnik</h1>
+
+<hr />
+
+<form asp-action="Create" method="post">
+    
+    <div>
+        <label asp-for="FirstName">First Name:</label>
+        <input asp-for="FirstName" />
+    </div>
+    <div>
+        <label asp-for="LastName">Last Name:</label>
+        <input asp-for="LastName" />
+    </div>
+    <div>
+        <label asp-for="MiddleName">MiddleName :</label>
+        <input asp-for="MiddleName" />
+    </div>
+    <div>
+        <label asp-for="DateOfBirth">Date of Birth:</label>
+        <input value="date" asp-for="DateOfBirth" />
+    </div>
+    <div>
+        <label asp-for="PassportSeries">Passport Series:</label>
+        <input asp-for="PassportSeries" />
+    </div>
+    <div>
+        <label asp-for="PassportNumber">Passport Number:</label>
+        <input asp-for="PassportNumber" />
+    </div>   
+    
+    <hr />
+    <button type="submit">Добавить Сотрудника</button>
+</form>

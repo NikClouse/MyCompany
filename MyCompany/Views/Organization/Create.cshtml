@@ -1,0 +1,27 @@
+﻿@using MyCompany.Models
+@model MyCompany.Models.Organization
+
+
+<h1 class="text-center text-secondary">Создать новый Организция</h1class>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="TaxId">Tax ID:</label>
+        <input asp-for="TaxId" />
+    </div>
+    <div>
+        <label asp-for="LegalAddress">Legal Address:</label>
+        <input asp-for="LegalAddress" />
+    </div>
+    <div>
+        <label asp-for="ActualAddress">Actual Address:</label>
+        <input asp-for="ActualAddress" />
+    </div>
+
+   <hr />
+    <button type="submit">Добавить Организация</button>
+</form>

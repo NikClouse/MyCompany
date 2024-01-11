@@ -1,0 +1,53 @@
+﻿@model List<Organization>
+<div class="row">
+	
+
+	<div class="col-9">
+		<div class="row">
+			<h3 class="text-center">Список Организации</h3>
+		</div>
+		<a 
+			asp-area=""
+		   asp-controller="Organization"
+		   asp-action="Create">Добавить новый Организации</a>
+		<div class="row">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>№</th>
+						<th>Название</th>
+						<th>ИНН</th>
+						<th>Юридический адрес</th>
+						<th>Фактический адрес</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@for(int i=0;i<Model.Count;i++)
+					{
+						<tr>
+							<td>@(i+1)</td>
+							<td>@Model[i].Name</td>
+							<td>@Model[i].TaxId</td>
+							<td>@Model[i].LegalAddress</td>
+							<td>@Model[i].ActualAddress</td>
+							<td><a 
+								asp-area=""
+								   asp-controller="Organization"
+								asp-action="Edit"
+								asp-route-productId="@Model[i].Id">Редактировать</a></td>
+							<td><a
+								   asp-area=""
+								   asp-controller="Organization"
+								   asp-action="Remove"
+								   asp-route-productId="@Model[i].Id">Удалить</a></td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+		<br />
+		<div><a asp-controller="Home" asp-action="Index">Главная страница</a></div>
+	</div>
+</div>
