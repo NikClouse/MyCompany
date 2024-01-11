@@ -9,5 +9,5 @@
 		public string DateOfBirth { get; set; }
 		public string PassportSeries { get; set; }
 		public string PassportNumber { get; set; }
-	}
+	}//
 }
